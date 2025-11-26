@@ -183,8 +183,8 @@ pip install -r requirements.txt
 
 ### **3. Add the dataset**
 
-Download the dataset from Kaggle:
-**Credit Card Fraud Detection**
+Download the dataset from Kaggle: 
+**Credit Card Fraud Detection** : https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 Place `creditcard.csv` in the project folder.
 
 ### **4. Run the main script**
@@ -197,7 +197,7 @@ python main.py
 
 # 🔮 Future Improvements
 
-Here are some enhancements you can explore:
+In future, the following optimizations can be considered-
 
 * Add **Random Forest**, **XGBoost**, or **CatBoost**
 * Use SMOTE variants:
@@ -223,11 +223,3 @@ This project demonstrates:
 By analyzing before vs after SMOTE results, we gain a clearer understanding of the trade-offs in real-world fraud detection systems.
 
 ---
-
-If you'd like, I can also:
-
-✅ Add example output screenshots
-✅ Add Mermaid diagrams
-✅ Generate a `requirements.txt`
-✅ Create a polished GitHub repo structure
-Just let me know!
