@@ -10,7 +10,6 @@ You can copy-paste this directly into **README.md**.
 
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 ![Python](https://img.shields.io/badge/Python-3.8+-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
 ![ML](https://img.shields.io/badge/Machine%20Learning-Fraud%20Detection-orange)
 
 This project explores machine learning techniques to detect **fraudulent credit card transactions**, focusing on the impact of **SMOTE oversampling** on logistic regression performance.
