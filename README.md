@@ -1,8 +1,4 @@
-Great — here is a **beautiful, GitHub-ready, polished README** with badges, icons, sections, and professional formatting.
 
-You can copy-paste this directly into **README.md**.
-
----
 
 # 🛡️ Credit Card Fraud Detection
 
