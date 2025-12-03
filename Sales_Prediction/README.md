@@ -1,105 +1,140 @@
-📊 Advertising Sales Prediction
-Linear Regression Model on Marketing Spend Data
+# 📊 Advertising Sales Prediction
 
+### Linear Regression on Marketing Spend Data
 
-A machine-learning project that predicts Sales based on advertising budgets across TV, Radio, and Newspaper.
-Includes full EDA, model training, evaluation, and visualization.
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![ML](https://img.shields.io/badge/Model-Linear%20Regression-yellow)
+![Libraries](https://img.shields.io/badge/Libraries-Pandas%20%7C%20NumPy%20%7C%20Sklearn%20%7C%20Matplotlib%20%7C%20Seaborn-orange)
 
-📁 Project Structure
+A machine learning project that predicts **Sales** using advertising budgets from **TV**, **Radio**, and **Newspaper** channels.
+Includes full **EDA**, **model training**, **evaluation**, and **visualization**.
+
+---
+
+## 📁 Project Structure
+
+```
 ├── advertising.csv
-├── script.py / notebook.ipynb
+├── script.py  (or .ipynb)
 └── README.md
+```
 
-🚀 Features
+---
 
-✔ Load & explore dataset
-✔ Correlation heatmap and pairplots
-✔ Train-test split
-✔ Linear Regression model
-✔ Model performance metrics (RMSE, R²)
-✔ Actual vs Predicted visualization
-✔ Baseline model comparison
-✔ Extract model coefficients
+## 🧰 Installation
 
-🧰 Installation
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn
+```
 
-Install required packages:
+---
 
-pip install pandas numpy scikit-learn matplotlib seaborn
+## 📊 Dataset
 
-📥 Dataset
+The dataset (`advertising.csv`) contains:
 
-The dataset (advertising.csv) contains four columns:
+| Column    | Description                       |
+| --------- | --------------------------------- |
+| TV        | Budget spent on TV ads            |
+| Radio     | Budget spent on Radio ads         |
+| Newspaper | Budget spent on Newspaper ads     |
+| Sales     | Sales generated (target variable) |
 
-Feature	Description
-TV	TV advertising budget
-Radio	Radio advertising budget
-Newspaper	Newspaper advertising budget
-Sales	Product sales (target variable)
-📌 Exploratory Data Analysis
-🔥 Correlation Heatmap
+---
 
-Helps identify strong predictors of Sales.
+## 🔍 Exploratory Data Analysis (EDA)
 
-🔍 Pairplot
+### Correlation Heatmap
 
-Visualizes relationships between features and the target.
+Used to identify feature relationships.
 
+```python
 sns.heatmap(df.corr(), annot=True, cmap="BrBG")
+```
+
+### Pairplot
+
+Shows feature interactions.
+
+```python
 sns.pairplot(df)
+```
 
-🧠 Model Training
+---
 
-The features used:
+## 🧠 Model Training
 
+```python
 X = df[["TV", "Radio", "Newspaper"]]
 y = df["Sales"]
 
-
-Train-test split:
-
-train_test_split(X, y, test_size=0.2, random_state=42)
-
-
-Train model:
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
 
 model = LinearRegression()
 model.fit(X_train, y_train)
+```
 
-📈 Model Evaluation
+---
 
-Metrics computed:
+## 📈 Model Evaluation
 
+```python
 RMSE: 1.65
 R² Score: 0.90
+```
 
+### Baseline Comparison
 
-Baseline comparison:
-
+```python
 Baseline RMSE: 4.22
 Error Reduction: 60.9%
+```
 
-📊 Actual vs Predicted Plot
+---
 
-Visualizes how well the model fits the data:
+## 📊 Visualization
 
+### Actual vs Predicted Sales
+
+```python
 plt.scatter(y_test, y_pred)
 plt.plot([0, 30], [0, 30], color='red')
+plt.xlabel("Actual Sales")
+plt.ylabel("Predicted Sales")
+```
 
-🧾 Model Coefficients
-Feature	Coefficient
-TV	…
-Radio	…
-Newspaper	…
-▶️ Running the Script
+---
+
+## 🧾 Model Coefficients
+
+| Feature   | Coefficient |
+| --------- | ----------- |
+| TV        | ...         |
+| Radio     | ...         |
+| Newspaper | ...         |
+
+---
+
+## ▶️ How to Run
+
+```bash
 python script.py
+```
+
+Or open the notebook in **Jupyter / Google Colab**.
+
+---
+
+## 🚀 Future Enhancements
+
+* Regularization (Ridge, Lasso)
+* Cross-validation
+* Hyperparameter tuning
+* Interactive dashboard (Streamlit)
+
+---
 
 
-or open in Google Colab/Jupyter Notebook.
-
-🧩 Future Improvements
-
-🔹 Add Lasso/Ridge regularization
-🔹 Use cross-validation
-🔹 Hyperparameter optimization
-🔹 Deploy with Streamlit or Flask
